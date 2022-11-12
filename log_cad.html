@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/log_cad_style.css">
+    <title>Vem Buscar!</title>
+</head>
+
+<body>
+    <div class="container">
+        <a class="links" id="paracadastro"></a>
+        <a class="links" id="paralogin"></a>
+
+        <div class="imagem">
+            <img src="img/Vem Buscar Logo.jpeg" alt="Vem Buscar Logo!">
+        </div>
+        
+        <div class="content">
+            <!--FORMULÁRIO DE LOGIN-->
+            <div id="login">
+                <form method="post" action="index.html">
+                    <h1>Login</h1>
+                    <p>
+                        <label for="username_login">Nome de usuário</label>
+                        <input id="username_login" name="username_login" required="required" type="text"
+                            placeholder="Digite seu nome de usuário" />
+                    </p>
+
+                    <p>
+                        <label for="senha_login">Senha</label>
+                        <input id="senha_login" name="senha_login" required="required" type="password"
+                            placeholder="Digite sua senha" />
+                    </p>
+
+                    <p>
+                        <input type="checkbox" name="manterlogado" id="manterlogado" value="" />
+                        <label for="manterlogado">Manter-me logado</label>
+                    </p>
+                    
+                    <p>
+                        <input class="btn_logar" type="submit" value="Logar"/>
+                    </p>
+                    
+                    <p class="link_senha">
+                        <a href="#">Esqueceu sua senha?</a>
+                    </p>
+
+                    <p class="link">
+                        Ainda não tem conta?
+                        <a href="#paracadastro">Cadastre-se</a>
+                    </p>
+                </form>
+            </div>
+
+            <!--FORMULÁRIO DE CADASTRO-->
+            <div id="cadastro">
+                <form method="post" action="index.html">
+                    <h1>Cadastro</h1>
+
+                    <p>
+                        <label for="usernmae_cad">Nome de usuário</label>
+                        <input id="username_cad" name="username_cad" required="required" type="text" placeholder="Crie um nome de usuário" maxlength="50">
+                    </p>
+                    
+                    <p>
+                        <label for="nome_cad">Nome e Sobrenome</label>
+                        <input id="nome_cad" name="nome_cad" required="required" type="text"
+                            placeholder="Digite seu nome e sobrenome" maxlength="50"/>
+                    </p>
+
+                    <p>
+                        <label for="email_cad">E-mail</label>
+                        <input id="email_cad" name="email_cad" required="required" type="email"
+                            placeholder="Digite seu e-mail" />
+                    </p>
+
+                    <p>
+                        <label for="tele_cad">Telefone</label>
+                        <input id="tele_cad" name="tele_cad" required="required" type="number"
+                            placeholder="Digite seu telefone" />
+                    </p>
+
+                    <p>
+                        <label for="cpf_cad">CPF</label>
+                        <input id="cpf_cad" name="cpf_cad" required="required" type="text" oninput="mascara(this)" placeholder="Apenas números"/>
+                    </p>
+
+                    <p>
+                        <label for="dtnasc_cad">Data de nascimento</label>
+                        <input id="dtnasc_cad" name="dtnasc_cad" required="required" type="date" />
+                    </p>
+
+
+                    <p>
+                        <label for="senha_cad">Senha</label>
+                        <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="Crie uma senha" maxlength="30" />
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Cadastrar" />
+                    </p>
+
+                    <p class="link">
+                        Já tem conta?
+                        <a href="#paralogin"> Ir para Login </a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      function mascara(i){
+   
+   var v = i.value;
+   
+   if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
+      i.value = v.substring(0, v.length-1);
+      return;
+   }
+   
+   i.setAttribute("maxlength", "14");
+   if (v.length == 3 || v.length == 7) i.value += ".";
+   if (v.length == 11) i.value += "-";
+
+}
+    </script>
+</body>
+
+</html>
