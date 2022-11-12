@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de contato</title>
+    <link rel="stylesheet" href="css/contato.css">
+    <script src="https://kit.fontawesome.com/63f88e34e8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <body>
+        <header>
+            <img src="img/vvb.png" alt="Vem Buscar! Logo" width="80px">
+            <h4><a class="header_link" href="index.html">Início</a></h4>
+            <h4><a class="header_link" href="minhaconta.html">Minha Conta</a></h4>
+            <h4><a class="header_link" href="contato.html">Contato</a></h4>
+            <h4><a class="header_link" href="sobre.html">Sobre</a></h4>
+            <div class="divBusca">
+                <form class="form_busca" action="#" method="post">
+                    <input type="text" name="txtBusca" id="txtBusca" placeholder="Buscar..." />
+                    <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            </div>
+        </header>
+
+        <div class="content">
+            <!--FORMULÁRIO DE LOGIN-->
+            <div id="contato">
+                <form method="post" action="">
+                    <h1>Contato</h1>
+                    <p>
+                        <label for="username_contato">Nome de usuário</label>
+                        <input id="username_contato" name="username_contato" required="required" type="text"
+                            placeholder="Digite seu nome de usuário" />
+                    </p>
+
+                    <p>
+                        <label for="email_contato">E-mail</label>
+                        <input id="email_contato" name="email_contato" required="required" type="email"
+                            placeholder="Digite seu e-mail" />
+                    </p>
+
+                    <p>
+                        <label for="msg_contato">Mensagem</label>
+                        <textarea name="msg_contato" id="msg_contato" cols="30" rows="10" placeholder="Digite sua mensagem..."></textarea>
+                    </p>
+
+                    <p>
+                        <input class="btn_logar" type="submit" value="Enviar" onclick="exibirEnviado()"/>
+                    </p>
+                </div>
+                </form>
+            </div>
+
+            <footer class="footer">
+                <div class="footer_content">
+                    <h4>&copy; 2022, Vem Buscar! Todos os direitos reservados.</h4>
+                    <h4><a class="footer_link" href="privacidade.html">Políticas de Privacidade</a></h4>
+                </div>
+            </footer>
+
+            <script>
+                function exibirEnviado(){
+                    alert("Sua mensagem foi enviada! Entraremos em contato pelo seu e-mail.")
+                }
+            </script>
+    </body>
+
+</html>
